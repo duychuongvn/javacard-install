@@ -6,7 +6,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * Created by huynhduychuong on 1/22/2016.
  */
