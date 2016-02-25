@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="CipurseCoreLibrary-2.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/CipurseCoreLibrary-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/CipursePluginImplementations-2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
