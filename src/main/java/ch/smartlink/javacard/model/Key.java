@@ -1,19 +1,22 @@
 package ch.smartlink.javacard.model;
 
+import ch.smartlink.javacard.model.adapter.HexStringShortAdapter;
+import ch.smartlink.javacard.model.adapter.StringShortKeyAlgAdapter;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Created by huynhduychuong on 1/22/2016.
  */
 public class Key {
 
-    private String keyAddlInfo;
+    private Short keyAddlInfo;
 
-    private String keyAlgoId;
+    private Short keyAlgoId;
 
-    private String keySecAttrIB;
+    private Short keySecAttrib;
 
     private String diversification;
 
@@ -25,28 +28,31 @@ public class Key {
 
     private KeySet keySet;
     @XmlAttribute(name = "KEY_ADDL_INFO")
-    public String getKeyAddlInfo() {
+    @XmlJavaTypeAdapter(HexStringShortAdapter.class)
+    public Short getKeyAddlInfo() {
         return keyAddlInfo;
     }
 
-    public void setKeyAddlInfo(String keyAddlInfo) {
+    public void setKeyAddlInfo(Short keyAddlInfo) {
         this.keyAddlInfo = keyAddlInfo;
     }
     @XmlAttribute(name = "KEY_ALGO_ID")
-    public String getKeyAlgoId() {
+    @XmlJavaTypeAdapter(StringShortKeyAlgAdapter.class)
+    public Short getKeyAlgoId() {
         return keyAlgoId;
     }
 
-    public void setKeyAlgoId(String keyAlgoId) {
+    public void setKeyAlgoId(Short keyAlgoId) {
         this.keyAlgoId = keyAlgoId;
     }
     @XmlAttribute(name = "KEY_SEC_ATTRIB")
-    public String getKeySecAttrIB() {
-        return keySecAttrIB;
+    @XmlJavaTypeAdapter(HexStringShortAdapter.class)
+    public Short getKeySecAttrib() {
+        return keySecAttrib;
     }
 
-    public void setKeySecAttrIB(String keySecAttrIB) {
-        this.keySecAttrIB = keySecAttrIB;
+    public void setKeySecAttrib(Short keySecAttrib) {
+        this.keySecAttrib = keySecAttrib;
     }
     @XmlAttribute(name = "diversification")
     public String getDiversification() {

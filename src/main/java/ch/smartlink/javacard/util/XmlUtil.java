@@ -26,6 +26,14 @@ public class XmlUtil {
         }
     }
 
+    /**
+     *
+     * @param processResult
+     * @param className
+     * @param <T>
+     * @return
+     * @throws JAXBException
+     */
     public static <T> T convertXmlToObject(String processResult, Class<T> className) throws JAXBException {
         return JAXB.unmarshal(new StringReader(processResult), className);
     }
